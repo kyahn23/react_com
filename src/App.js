@@ -1,4 +1,4 @@
-import { useState } from "react/cjs/react.production.min";
+import { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 
@@ -25,9 +25,11 @@ const App = () => {
     },
   ];
 
+  const [exp, setExp] = useState(expenses);
   const addExpenseHandler = (expense) => {
     console.log("In App.js");
-    console.log(expenses);
+    console.log(exp);
+    setExp(expenses.push(expense));
   };
 
   return (
