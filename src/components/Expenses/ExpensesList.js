@@ -6,7 +6,8 @@ const ExpensesList = (props) => {
   // props.items.length === 0 && <h2 className="expenses-list__fallback">Found no expenses.</h2>
 
   if (props.items.length === 0) {
-    return <h2 className="expenses-list__fallback">Found no expenses.</h2>;
+    return <h2 className="expenses-list__fallback">소비 내역이 없습니다.</h2>;
+    // <h2 className="expenses-list__fallback">Found no expenses.</h2>;
   }
 
   return (
